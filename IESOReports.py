@@ -5,7 +5,9 @@ import xml.etree.ElementTree as et
 
 
 class Report:
-        
+    # used to turn IESO public report xml or csv files into a dataframe
+    # which can then be sent to a database with SQLAlchemy    
+    
     def __init__(self, filepath):        
         
         assert os.path.isabs(filepath), "invalid filepath provided"

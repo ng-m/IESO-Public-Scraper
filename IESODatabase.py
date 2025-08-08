@@ -6,6 +6,8 @@ from datetime import timedelta, datetime
 import psycopg2, textwrap, os
 import polars as pl, pandas as pd
 
+# these tasks and flows are intended to be orchestrated with prefect
+# I can set the flow as a scheduled task to run every 5 minutes to update RealtimeEnergyLMP for example
 
 @task(cache_policy=None)
 def getPublicReportList(engine,schema):
